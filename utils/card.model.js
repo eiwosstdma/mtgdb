@@ -4,7 +4,7 @@ const cardDBSchema = new mongoose.Schema({
   name: String,
   color: String,
   type: String,
-  image_link: String
+  image: String
 });
 
 class CardDBModel {
