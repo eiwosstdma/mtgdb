@@ -7,12 +7,14 @@ export default function({ card }) {
       <header>
         <h1>{ card?.name }</h1>
         <p>
-          Type: { card?.type } <br/>
-          Color: { card?.type }
+          Type: { card.type } <br/>
+          Color: { card.color }
         </p>
       </header>
 
-      <Image src={card?.image} alt={"Image of the card" + card?.name} layout="fill" objectFit="contain" />
+      <section style={{width: '100%', height: '100%', position: 'relative', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+        <Image src={card.image} alt={"Name of the card" + card.name} width="333" height="333"/>
+      </section>
 
       <footer>
         <Link href={ "/delete/" + card?._id }>Delete</Link>
