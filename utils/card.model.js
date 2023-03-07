@@ -15,8 +15,8 @@ class CardDBModel {
     this.register();
   }
 
-  register() {
-    this._instance?.register('cards', cardDBSchema);
+  async register() {
+    await (await this._instance).model('cards', cardDBSchema);
   }
 }
 
