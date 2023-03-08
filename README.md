@@ -1,5 +1,9 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+> **Warning**
+> 
+> Do not use that project in a production environment.
+
 # MTGDB
 ## What is that
 MTGDB is a Nextjs project which has the purpose to offer 

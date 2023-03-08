@@ -11,7 +11,10 @@ export default function Cards({ data }) {
     <div>
       <h1>All cards</h1>
       {cards.map(card => (
-        <Card key={card._id} card={card}/>
+        <details key={card._id}>
+          <summary>Card name: { card.name }</summary>
+          <Card key={card._id} card={card}/>
+        </details>
       ))}
     </div>
   )
