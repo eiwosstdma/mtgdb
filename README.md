@@ -26,3 +26,13 @@ important characteristic;
 - Type
 
 You should also provide an image which will be put on the server.
+
+
+# Side notes
+## Important
+- Search engine need to be done.
+
+## GOOD
+- Should add better error handling throughout getServerSideProps() functions
+- Should delete the file in "public/image" too
+- Should use Formik for forms handling
