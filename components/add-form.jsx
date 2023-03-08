@@ -1,6 +1,6 @@
 export default function AddForm() {
   return (
-    <form action="/add-card" method="post">
+    <form action="/add-card" method="post" encType="multipart/form-data">
       <label htmlFor="name">Name</label>
       <input type="text" id="name" name="name" required/>
 
