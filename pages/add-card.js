@@ -46,7 +46,7 @@ export async function getServerSideProps({ req, res }) {
     }
   }
 
-  const DB = await CardModel()._instance;
+  const DB = await CardModel().share();
   const Cards = await DB.model('cards');
   const card = new Cards({ name, color, type, image: `/image/${fileNewName}` });
 

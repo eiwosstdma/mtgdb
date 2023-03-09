@@ -22,7 +22,7 @@ export async function getServerSideProps({ req, res }) {
   const body = await parseBody(req, '1mb');
   const { name, type, color } = body;
 
-  const DB = await CardModel()._instance;
+  const DB = await CardModel().share();
   const Cards = await DB.model('cards');
   // const cards = await Cards.find({ name, color, type });
 

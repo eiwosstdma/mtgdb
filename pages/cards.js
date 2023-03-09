@@ -21,7 +21,7 @@ export default function Cards({ data }) {
 }
 
 export async function getServerSideProps() {
-  const DB = await CardModel()._instance;
+  const DB = await CardModel().share();
   const Cards = await DB.model('cards');
   const data = await Cards.find();
 

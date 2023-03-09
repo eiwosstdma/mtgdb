@@ -8,6 +8,9 @@ const cardDBSchema = new mongoose.Schema({
 });
 
 class CardDBModel {
+  /**
+   * @private {Promise<Mongoose>}
+   */
   _instance;
 
   constructor() {
@@ -17,6 +20,10 @@ class CardDBModel {
 
   async register() {
     await (await this._instance).model('cards', cardDBSchema);
+  }
+
+  async share() {
+    return await this._instance;
   }
 }
 
