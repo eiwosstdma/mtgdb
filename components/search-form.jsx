@@ -1,11 +1,11 @@
 export default function SearchForm() {
   return (
-    <form>
+    <form method="post" action="/search-card">
       <label htmlFor="name">Name</label>
       <input type="text" id="name" name="name" required/>
 
       <label htmlFor="color">Color</label>
-      <select name="color" id="color" required>
+      <select name="color" id="color">
         <option></option>
         <option value="colorless">Colorless</option>
         <option value="multicolor">Multicolor</option>
@@ -17,7 +17,7 @@ export default function SearchForm() {
       </select>
 
       <label htmlFor="type">Type</label>
-      <select name="type" id="type" required>
+      <select name="type" id="type">
         <option></option>
         <option value="creature">Creature</option>
         <option value="instant">Instant</option>
@@ -30,7 +30,7 @@ export default function SearchForm() {
 
       <br/>
       <hr/>
-      <button type="submit">Add a card</button>
+      <button type="submit">Search a card</button>
     </form>
   )
 }
