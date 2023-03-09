@@ -10,12 +10,16 @@ export default function Cards({ data }) {
   return (
     <div>
       <h1>All cards</h1>
-      {cards.map(card => (
-        <details key={card._id}>
-          <summary>Card name: { card.name }</summary>
-          <Card key={card._id} card={card}/>
-        </details>
-      ))}
+      {
+        cards?.length === 0 ?
+          'No cards exist yet.':
+          cards.map(card => (
+            <details key={card._id}>
+              <summary>Card name: { card.name }</summary>
+              <Card key={card._id} card={card}/>
+            </details>
+          ))
+      }
     </div>
   )
 }

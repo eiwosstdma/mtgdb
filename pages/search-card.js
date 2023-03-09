@@ -8,12 +8,16 @@ export default function SearchCard({ data }) {
   return (
     <div>
       <h1>Searched cards found in the DB</h1>
-      {cards.map(card => (
-        <details key={card._id}>
-          <summary>Card name: { card.name }</summary>
-          <Card key={card._id} card={card}/>
-        </details>
-      ))}
+      {
+        cards?.length === 0 ?
+          'No cards has been found!':
+          cards.map(card => (
+            <details key={card._id}>
+              <summary>Card name: { card.name }</summary>
+              <Card key={card._id} card={card}/>
+            </details>
+          ))
+      }
     </div>
   )
 }
