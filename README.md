@@ -30,7 +30,7 @@ You should also provide an image which will be put on the server.
 
 # Side notes
 ## Important
-- Search engine need to be done.
+- Search engine need to be done. => Need to gives a different page when no cards are found.
 
 ## GOOD
 - Should add better error handling throughout getServerSideProps() functions
