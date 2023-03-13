@@ -28,7 +28,6 @@ export async function getServerSideProps({ req, res }) {
 
   const DB = await CardModel().share();
   const Cards = await DB.model('cards');
-  // const cards = await Cards.find({ name, color, type });
 
   let cards = [];
 
